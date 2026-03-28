@@ -1,0 +1,4 @@
+{{ define "main" }}
+{{ $p := .Site.GetPage "manutenzione" }}
+{{ if $p }}{{ $p.Content }}{{ end }}
+{{ end }}
