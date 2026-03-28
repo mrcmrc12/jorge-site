@@ -1,0 +1,20 @@
+{{ define "main" }}
+<ul class="session-list">
+  <li>
+    <a href="/proemio/">
+      <span class="session-date"></span>
+      <span class="session-title">Proemio</span>
+    </a>
+  </li>
+  {{ range .Site.RegularPages.ByDate.Reverse }}
+  {{ if ne .File.Path "proemio.md" }}
+  <li>
+    <a href="{{ .RelPermalink }}">
+      <span class="session-date">{{ .File.BaseFileName | replaceRE "_.*" "" }}</span>
+      <span class="session-title">{{ .Title }}</span>
+    </a>
+  </li>
+  {{ end }}
+  {{ end }}
+</ul>
+{{ end }}

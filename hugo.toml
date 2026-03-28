@@ -1,0 +1,9 @@
+baseURL = "/"
+languageCode = "it-IT"
+title = "Jorge"
+enableGitInfo = false
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = false

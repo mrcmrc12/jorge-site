@@ -1,0 +1,7 @@
+{{ define "main" }}
+<article>
+  <time>{{ .File.BaseFileName | replaceRE "_.*" "" }}</time>
+  {{ if .Title }}<h1>{{ .Title }}</h1>{{ end }}
+  {{ .Content }}
+</article>
+{{ end }}

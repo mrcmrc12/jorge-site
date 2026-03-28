@@ -1,0 +1,12 @@
+{{ define "main" }}
+<ul class="session-list">
+  {{ range .Pages.ByDate.Reverse }}
+  <li>
+    <a href="{{ .RelPermalink }}">
+      <span class="session-date">{{ .File.BaseFileName | replaceRE "_.*" "" }}</span>
+      <span class="session-title">{{ .Title }}</span>
+    </a>
+  </li>
+  {{ end }}
+</ul>
+{{ end }}
