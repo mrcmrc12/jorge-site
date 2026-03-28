@@ -1,4 +1,4 @@
-baseURL = "/"
+baseURL = "https://mrcmrc12.github.io/jorge-site/"
 languageCode = "it-IT"
 title = "Jorge"
 enableGitInfo = false
